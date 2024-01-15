@@ -9,4 +9,5 @@ linked list
         https://www.geeksforgeeks.org/data-structures/
         Адитья Бхаргава - Грокаем Алгоритмы. Иллюстрированное пособие для программистов и любопытствущих
         Седжвик – Алгоритмы на Java
+        https://www.youtube.com/watch?v=FmXtcXz-3HA
 		

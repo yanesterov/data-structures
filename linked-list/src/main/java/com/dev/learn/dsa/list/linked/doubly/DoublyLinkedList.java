@@ -12,6 +12,7 @@ public class DoublyLinkedList<T> {
 
     private Node head = null;
     private Node tail = null;
+    private int size = 0;
 
     /**
      * Add a node at the front of the list
@@ -27,6 +28,36 @@ public class DoublyLinkedList<T> {
             head.prev = node;
         }
         head = node;
+        size++;
+    }
+
+    /**
+     * Add a node at position
+     *
+     * @param item     node value
+     * @param position location of new node
+     */
+    public void add(T item, int position) {
+        int size = size();
+        if (position < 0 || position >= size) {
+            throw new IllegalArgumentException(format("position[%s] must be >= 0 and < size[%s]", position, size));
+        }
+        var node = new Node(item);
+        var index = 0;
+        if (isNull(head) || position == 0) {
+            push(item);
+        } else {
+            var nodeToChange = head;
+            while (!isNull(nodeToChange) && index < position) {
+                nodeToChange = nodeToChange.next;
+                index++;
+            }
+            nodeToChange.prev.next = node;
+            node.prev = nodeToChange.prev;
+            nodeToChange.prev = node;
+            node.next = nodeToChange;
+        }
+        size++;
     }
 
     /**
@@ -41,7 +72,9 @@ public class DoublyLinkedList<T> {
             head = tail;
         } else {
             prevTail.next = tail;
+            tail.prev = prevTail;
         }
+        size++;
     }
 
     public T getHeadValue() {
@@ -50,6 +83,10 @@ public class DoublyLinkedList<T> {
 
     public T getTailValue() {
         return !isNull(tail) ? tail.item : null;
+    }
+
+    public int size() {
+        return size;
     }
 
     @Override
@@ -70,7 +107,7 @@ public class DoublyLinkedList<T> {
 
     private class Node {
 
-        private T item;
+        private final T item;
         private Node prev;
         private Node next;
 

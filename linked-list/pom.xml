@@ -7,13 +7,13 @@
     <parent>
         <groupId>com.dev.learn.dsa</groupId>
         <artifactId>data-structures</artifactId>
-        <version>0.1.0</version>
+        <version>0.2.0</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
 
     <groupId>com.dev.learn.dsa.data-structures</groupId>
     <artifactId>linked-list</artifactId>
-    <version>0.1.0</version>
+    <version>0.2.0</version>
 
     <properties>
         <maven.compiler.source>21</maven.compiler.source>
@@ -22,6 +22,7 @@
     </properties>
 
     <dependencies>
+        <!--region test-->
         <dependency>
             <groupId>org.assertj</groupId>
             <artifactId>assertj-core</artifactId>
@@ -31,8 +32,9 @@
             <artifactId>junit-jupiter-api</artifactId>
         </dependency>
         <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-params</artifactId>
         </dependency>
+        <!--endregion-->
     </dependencies>
 </project>
