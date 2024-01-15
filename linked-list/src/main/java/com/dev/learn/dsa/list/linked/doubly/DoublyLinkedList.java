@@ -38,14 +38,15 @@ public class DoublyLinkedList<T> {
      * @param position location of new node
      */
     public void add(T item, int position) {
-        int size = size();
-        if (position < 0 || position >= size) {
-            throw new IllegalArgumentException(format("position[%s] must be >= 0 and < size[%s]", position, size));
+        int localSize = size();
+        if (position < 0 || position >= localSize) {
+            throw new IllegalArgumentException(format("position[%s] must be >= 0 and < size[%s]", position, localSize));
         }
         var node = new Node(item);
         var index = 0;
         if (isNull(head) || position == 0) {
             push(item);
+            return;
         } else {
             var nodeToChange = head;
             while (!isNull(nodeToChange) && index < position) {
@@ -77,6 +78,19 @@ public class DoublyLinkedList<T> {
         size++;
     }
 
+    /**
+     * Remove node from the front of the list
+     */
+    public T pop() {
+        if (isNull(head)) {
+            return null;
+        }
+        var item = head.item;
+        head = head.next;
+        size--;
+        return item;
+    }
+
     public T getHeadValue() {
         return !isNull(head) ? head.item : null;
     }
@@ -93,7 +107,7 @@ public class DoublyLinkedList<T> {
     public String toString() {
         var stringBuilder = new StringBuilder("linked list: ");
         if (isNull(head)) {
-            stringBuilder.append("empty");
+            stringBuilder.append("[]");
         } else {
             var node = head;
             while (!isNull(node)) {
@@ -101,8 +115,7 @@ public class DoublyLinkedList<T> {
                 node = node.next;
             }
         }
-        var result = stringBuilder.toString();
-        return result.substring(0, result.length() - 3);
+        return stringBuilder.toString().replaceAll("\\s->\\s$", "");
     }
 
     private class Node {
