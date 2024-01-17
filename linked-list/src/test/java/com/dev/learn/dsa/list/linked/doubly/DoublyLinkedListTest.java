@@ -118,7 +118,7 @@ class DoublyLinkedListTest {
             return Stream.of(
                     Arguments.of(0, 7, 6),
                     Arguments.of(3, 0, 6),
-                    Arguments.of(6, 0, 6)
+                    Arguments.of(6, 0, 7)
             );
         }
     }
