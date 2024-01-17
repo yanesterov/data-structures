@@ -129,7 +129,7 @@ class DoublyLinkedListTest {
 
         @Test
         @DisplayName("shouldn't pop() delete anything at the front of empty list")
-        void shouldDeleteNodeFromFrontOfEmptyList() {
+        void shouldNotDeleteNodeFromFrontOfEmptyList() {
             //given
             var list = new DoublyLinkedList<Double>();
             assertThat(list).hasAllNullFieldsOrPropertiesExcept("size");
@@ -157,6 +157,52 @@ class DoublyLinkedListTest {
             assertThat(list.getHeadValue()).isEqualTo(1);
             assertThat(list.size()).isEqualTo(6);
             System.out.printf("[DeleteNodeFromFrontOfList] %s%n", list);
+        }
+
+        @Test
+        @DisplayName("shouldn't dequeue() delete anything at the end of empty list")
+        void shouldNotDeleteNodeFromEndOfEmptyList() {
+            //given
+            var list = new DoublyLinkedList<Double>();
+            assertThat(list).hasAllNullFieldsOrPropertiesExcept("size");
+            assertThat(list.size()).isZero();
+            //when
+            var item = list.dequeue();
+            //then
+            assertThat(item).isNull();
+            assertThat(list.size()).isZero();
+            System.out.printf("[DeleteNodeFromFrontOfEmptyList] %s%n", list);
+        }
+
+        @Test
+        @DisplayName("should dequeue() delete a node at the end of one-node-list")
+        void shouldDeleteNodeFromEndOfOneNodeList() {
+            //given
+            var list = new DoublyLinkedList<Boolean>();
+            list.push(true);
+            assertThat(list.size()).isEqualTo(1);
+            //when
+            var item = list.dequeue();
+            //then
+            assertThat(item).isTrue();
+            assertThat(list.size()).isZero();
+            System.out.printf("[DeleteNodeFromEndOfOneNodeList] %s%n", list);
+        }
+
+        @Test
+        @DisplayName("should dequeue() delete a node at the end of list")
+        void shouldDeleteNodeFromEndOfList() {
+            //given
+            var list = new DoublyLinkedList<Integer>();
+            IntStream.range(0, 7).forEach(list::enqueue);
+            assertThat(list.size()).isEqualTo(7);
+            //when
+            var item = list.dequeue();
+            //then
+            assertThat(item).isEqualTo(6);
+            assertThat(list.size()).isEqualTo(6);
+            assertThat(list.getTailValue()).isEqualTo(5);
+            System.out.printf("[DeleteNodeFromEndOfOneNodeList] %s%n", list);
         }
     }
 }

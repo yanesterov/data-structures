@@ -38,9 +38,8 @@ public class DoublyLinkedList<T> {
      * @param position location of new node
      */
     public void add(T item, int position) {
-        int localSize = size();
-        if (position < 0 || position >= localSize) {
-            throw new IllegalArgumentException(format("position[%s] must be >= 0 and < size[%s]", position, localSize));
+        if (position < 0 || position >= size) {
+            throw new IllegalArgumentException(format("position[%s] must be >= 0 and < size[%s]", position, size));
         }
         var node = new Node(item);
         var index = 0;
@@ -87,6 +86,22 @@ public class DoublyLinkedList<T> {
         }
         var item = head.item;
         head = head.next;
+        size--;
+        return item;
+    }
+
+    /**
+     * Delete a node from the end of list
+     */
+    public T dequeue() {
+        if (isNull(tail)) {
+            return null;
+        }
+        if (size == 1) {
+            return pop();
+        }
+        var item = tail.item;
+        tail = tail.prev;
         size--;
         return item;
     }
