@@ -204,5 +204,32 @@ class DoublyLinkedListTest {
             assertThat(list.getTailValue()).isEqualTo(5);
             System.out.printf("[DeleteNodeFromEndOfOneNodeList] %s%n", list);
         }
+
+        @ParameterizedTest
+        @MethodSource("shouldDeleteNodeFromPositionArgs")
+        @DisplayName("should delete() delete a node from position")
+        void shouldDeleteNodeFromPosition(int position, int headValue, int tailValue, int expectedItem) {
+            //given
+            var list = new DoublyLinkedList<Integer>();
+            IntStream.range(0, 7).forEach(list::enqueue);
+            assertThat(list.size()).isEqualTo(7);
+            //when
+            var item = list.delete(position);
+            //then
+            assertThat(list).hasNoNullFieldsOrProperties();
+            assertThat(list.size()).isEqualTo(6);
+            assertThat(item).isEqualTo(expectedItem);
+            assertThat(list.getHeadValue()).isEqualTo(headValue);
+            assertThat(list.getTailValue()).isEqualTo(tailValue);
+            System.out.printf("[DeleteNodeFromPosition] %s%n", list);
+        }
+
+        private static Stream<Arguments> shouldDeleteNodeFromPositionArgs() {
+            return Stream.of(
+//                    Arguments.of(0, 1, 6, 0),
+//                    Arguments.of(3, 0, 6, 3),
+                    Arguments.of(6, 0, 5, 6)
+            );
+        }
     }
 }

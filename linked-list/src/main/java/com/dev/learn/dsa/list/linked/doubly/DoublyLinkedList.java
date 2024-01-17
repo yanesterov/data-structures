@@ -78,7 +78,9 @@ public class DoublyLinkedList<T> {
     }
 
     /**
-     * Remove node from the front of the list
+     * Delete a node from the front of the list
+     *
+     * @return deleted node value
      */
     public T pop() {
         if (isNull(head)) {
@@ -88,6 +90,36 @@ public class DoublyLinkedList<T> {
         head = head.next;
         size--;
         return item;
+    }
+
+    /**
+     * Delete a node from position
+     *
+     * @param position node location for deleting
+     * @return deleted node value
+     */
+    public T delete(int position) {
+        if (position < 0 || position >= size) {
+            throw new IllegalArgumentException(format("position[%s] must be >= 0 and < size[%s]", position, size));
+        }
+        var index = 0;
+        if (isNull(head) || position == 0) {
+            return pop();
+        } else if (position == size - 1) {
+            return dequeue();
+        } else {
+            var nodeToChange = head;
+            while (!isNull(nodeToChange) && index < position) {
+                nodeToChange = nodeToChange.next;
+                index++;
+            }
+            nodeToChange.prev.next = nodeToChange.next;
+            nodeToChange.next.prev = nodeToChange.prev;
+            nodeToChange.prev = null;
+            nodeToChange.next = null;
+            size--;
+            return nodeToChange.item;
+        }
     }
 
     /**
@@ -102,6 +134,8 @@ public class DoublyLinkedList<T> {
         }
         var item = tail.item;
         tail = tail.prev;
+        tail.next.prev = null;
+        tail.next = null;
         size--;
         return item;
     }
