@@ -10,4 +10,10 @@ linked list
         Адитья Бхаргава - Грокаем Алгоритмы. Иллюстрированное пособие для программистов и любопытствущих
         Седжвик – Алгоритмы на Java
         https://www.youtube.com/watch?v=FmXtcXz-3HA
-		
+        https://leetcode.com/tag/linked-list/
+
+***
+
+| # | topic | task | solution | poms | time complexity |
+|--|--|--|--|--|--|
+| 1 | linked list | [link](https://leetcode.com/problems/remove-duplicates-from-sorted-list/) | [class](com/dev/learn/dsa/list/linked/leetcode/easy/RemoveDuplicatesFromSortedList.java) | 4 | O(N) |
