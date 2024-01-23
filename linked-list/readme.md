@@ -19,4 +19,5 @@ linked list
 |---|--|--|--|------|--|
 | 1 | linked list | [link](https://leetcode.com/problems/remove-duplicates-from-sorted-list/) | [class](com/dev/learn/dsa/list/linked/leetcode/easy/RemoveDuplicatesFromSortedList.java) | 4    | O(N) |
 | 2 | linked list | [link](https://leetcode.com/problems/middle-of-the-linked-list/) | [class](com/dev/learn/dsa/list/linked/leetcode/easy/MiddleOfTheLinkedList.java) | 4    | O(N) |
-| 3 | linked list | [link](https://leetcode.com/problems/convert-binary-number-in-a-linked-list-to-integer/) | [class](com/dev/learn/dsa/list/linked/leetcode/easy/ConvertBinaryNumberInLinkedListToInteger.java) | 2 | O(N) |
+| 3 | linked list | [link](https://leetcode.com/problems/convert-binary-number-in-a-linked-list-to-integer/) | [class](com/dev/learn/dsa/list/linked/leetcode/easy/ConvertBinaryNumberInLinkedListToInteger.java) | 2    | O(N) |
+| 4 | linked list | [link](https://leetcode.com/problems/reverse-linked-list/) | [class](com/dev/learn/dsa/list/linked/leetcode/easy/ReverseLinkedList.java) | 4 | O(N) |
