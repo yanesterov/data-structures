@@ -37,27 +37,27 @@ class RemoveLinkedListElementsTest {
 
     private static Stream<Arguments> shouldRemoveElements() {
         return Stream.of(
-//                Arguments.of(new RemoveLinkedListElements.ListNode(), 1),
+                Arguments.of(null, 1),
                 Arguments.of(new RemoveLinkedListElements.ListNode(7,
-                        new RemoveLinkedListElements.ListNode(7
-//                                new RemoveLinkedListElements.ListNode(7,
-//                                        new RemoveLinkedListElements.ListNode(7)
-//                                )
+                        new RemoveLinkedListElements.ListNode(7,
+                                new RemoveLinkedListElements.ListNode(7,
+                                        new RemoveLinkedListElements.ListNode(7)
+                                )
                         )
-                ), 7)
-//                Arguments.of(new RemoveLinkedListElements.ListNode(1,
-//                        new RemoveLinkedListElements.ListNode(2,
-//                                new RemoveLinkedListElements.ListNode(6,
-//                                        new RemoveLinkedListElements.ListNode(3,
-//                                                new RemoveLinkedListElements.ListNode(4,
-//                                                        new RemoveLinkedListElements.ListNode(5,
-//                                                                new RemoveLinkedListElements.ListNode(6)
-//                                                        )
-//                                                )
-//                                        )
-//                                )
-//                        )
-//                ), 6)
+                ), 7),
+                Arguments.of(new RemoveLinkedListElements.ListNode(1,
+                        new RemoveLinkedListElements.ListNode(2,
+                                new RemoveLinkedListElements.ListNode(6,
+                                        new RemoveLinkedListElements.ListNode(3,
+                                                new RemoveLinkedListElements.ListNode(4,
+                                                        new RemoveLinkedListElements.ListNode(5,
+                                                                new RemoveLinkedListElements.ListNode(6)
+                                                        )
+                                                )
+                                        )
+                                )
+                        )
+                ), 6)
         );
     }
 }

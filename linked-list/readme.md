@@ -22,3 +22,4 @@ linked list
 | 3 | linked list | [link](https://leetcode.com/problems/convert-binary-number-in-a-linked-list-to-integer/) | [class](com/dev/learn/dsa/list/linked/leetcode/easy/ConvertBinaryNumberInLinkedListToInteger.java) | 2 | O(N) |
 | 4 | linked list | [link](https://leetcode.com/problems/reverse-linked-list/) | [class](com/dev/learn/dsa/list/linked/leetcode/easy/ReverseLinkedList.java) | 4 | O(N) |
 | 5 | linked list | [link](https://leetcode.com/problems/remove-linked-list-elements/) | [class](com/dev/learn/dsa/list/linked/leetcode/easy/RemoveLinkedListElements.java) | 4 | O(N) |
+| 6 | linked list | [link](https://leetcode.com/problems/merge-two-sorted-lists/) | [class](com/dev/learn/dsa/list/linked/leetcode/easy/MergeTwoSortedLists.java) | 4 | O(N) |

@@ -6,7 +6,7 @@
     <groupId>com.dev.learn.dsa</groupId>
     <artifactId>data-structures</artifactId>
     <packaging>pom</packaging>
-    <version>1.11.0</version>
+    <version>1.12.0</version>
 
     <properties>
     <!--region common-->
