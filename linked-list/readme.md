@@ -15,11 +15,12 @@ linked list
 
 ***
 
-| # | topic | task | solution | poms | time complexity |
-|---|--|--|--|-----|--|
-| 1 | linked list | [link](https://leetcode.com/problems/remove-duplicates-from-sorted-list/) | [class](com/dev/learn/dsa/list/linked/leetcode/easy/RemoveDuplicatesFromSortedList.java) | 4 | O(N) |
-| 2 | linked list | [link](https://leetcode.com/problems/middle-of-the-linked-list/) | [class](com/dev/learn/dsa/list/linked/leetcode/easy/MiddleOfTheLinkedList.java) | 4 | O(N) |
-| 3 | linked list | [link](https://leetcode.com/problems/convert-binary-number-in-a-linked-list-to-integer/) | [class](com/dev/learn/dsa/list/linked/leetcode/easy/ConvertBinaryNumberInLinkedListToInteger.java) | 2 | O(N) |
-| 4 | linked list | [link](https://leetcode.com/problems/reverse-linked-list/) | [class](com/dev/learn/dsa/list/linked/leetcode/easy/ReverseLinkedList.java) | 4 | O(N) |
-| 5 | linked list | [link](https://leetcode.com/problems/remove-linked-list-elements/) | [class](com/dev/learn/dsa/list/linked/leetcode/easy/RemoveLinkedListElements.java) | 4 | O(N) |
-| 6 | linked list | [link](https://leetcode.com/problems/merge-two-sorted-lists/) | [class](com/dev/learn/dsa/list/linked/leetcode/easy/MergeTwoSortedLists.java) | 4 | O(N) |
+| # | topic       | task                                                                         | solution | poms | time complexity |space complexity|
+|---|-------------|------------------------------------------------------------------------------|--|-----|-----------------|-----------------|
+| 1 | linked list | [link](https://leetcode.com/problems/remove-duplicates-from-sorted-list/)    | [class](com/dev/learn/dsa/list/linked/leetcode/easy/RemoveDuplicatesFromSortedList.java) | 4   | O(N)            |?|
+| 2 | linked list | [link](https://leetcode.com/problems/middle-of-the-linked-list/)             | [class](com/dev/learn/dsa/list/linked/leetcode/easy/MiddleOfTheLinkedList.java) | 4   | O(N)            |?|
+| 3 | linked list | [link](https://leetcode.com/problems/convert-binary-number-in-a-linked-list-to-integer/) | [class](com/dev/learn/dsa/list/linked/leetcode/easy/ConvertBinaryNumberInLinkedListToInteger.java) | 2   | O(N)            |?|
+| 4 | linked list | [link](https://leetcode.com/problems/reverse-linked-list/)                   | [class](com/dev/learn/dsa/list/linked/leetcode/easy/ReverseLinkedList.java) | 4   | O(N)            |?|
+| 5 | linked list | [link](https://leetcode.com/problems/remove-linked-list-elements/)           | [class](com/dev/learn/dsa/list/linked/leetcode/easy/RemoveLinkedListElements.java) | 4   | O(N)            |?|
+| 6 | linked list | [link](https://leetcode.com/problems/merge-two-sorted-lists/)                | [class](com/dev/learn/dsa/list/linked/leetcode/easy/MergeTwoSortedLists.java) | 4   | O(N)            |?|
+| 7 | array       | [1920](https://leetcode.com/problems/build-array-from-permutation/)          | [class](com/dev/learn/dsa/array/leetcode/easy/BuildArrayFromPermutation.java) | O(N) | O(N) |

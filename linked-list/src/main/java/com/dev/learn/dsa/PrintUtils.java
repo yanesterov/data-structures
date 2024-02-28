@@ -6,7 +6,8 @@ import static java.lang.String.format;
 
 public final class PrintUtils {
 
-    private PrintUtils() {}
+    private PrintUtils() {
+    }
 
     public static <T> void print(LinkedListNode<T> head) {
         var stringBuilder = new StringBuilder();
@@ -34,5 +35,19 @@ public final class PrintUtils {
             }
         }
         System.out.println(message + stringBuilder.toString().replaceAll("\\s->\\s$", ""));
+    }
+
+    public static void print(String message, int[] array) {
+        var stringBuilder = new StringBuilder();
+        if (array == null) {
+            stringBuilder.append("[]");
+        } else {
+            stringBuilder.append("[");
+            for (int i = 0; i < array.length; i++) {
+                stringBuilder.append(format("%d,", array[i]));
+            }
+            stringBuilder.append("]");
+        }
+        System.out.println(message + stringBuilder.toString().replaceAll(",]", "]"));
     }
 }
