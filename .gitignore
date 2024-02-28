@@ -6,4 +6,5 @@ out/
 *.iml
 .idea
 
+array/target
 linked-list/target
