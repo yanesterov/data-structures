@@ -24,3 +24,4 @@ https://leetcode.com/tag/linked-list/
 | 5 | linked list | [link](https://leetcode.com/problems/remove-linked-list-elements/)                       | [class](com/dev/learn/dsa/list/linked/leetcode/easy/RemoveLinkedListElements.java)                 |
 | 6 | linked list | [link](https://leetcode.com/problems/merge-two-sorted-lists/)                            | [class](com/dev/learn/dsa/list/linked/leetcode/easy/MergeTwoSortedLists.java)                      |
 | 7 | array       | [link](https://leetcode.com/problems/build-array-from-permutation/)                      | [class](com/dev/learn/dsa/array/leetcode/easy/BuildArrayFromPermutation.java)                      |
+| 8 | array       | [link](https://leetcode.com/problems/number-of-employees-who-met-the-target/)            | [class](com/dev/learn/dsa/array/leetcode/easy/NumberOfEmployeesWhoMetTheTarget.java:22)            |
