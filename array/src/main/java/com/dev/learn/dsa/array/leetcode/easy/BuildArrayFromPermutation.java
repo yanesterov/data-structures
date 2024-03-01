@@ -5,6 +5,10 @@ package com.dev.learn.dsa.array.leetcode.easy;
  */
 public class BuildArrayFromPermutation {
 
+    /**
+     * Time complexity: O(N)
+     * Space complexity: O(N)
+     */
     public int[] buildArray(int[] nums) {
         var ans = new int[nums.length];
 
@@ -13,5 +17,23 @@ public class BuildArrayFromPermutation {
         }
 
         return ans;
+    }
+
+    /**
+     * Time complexity: O(N)
+     * Space complexity: O(1)
+     */
+    public int[] buildArrayRecursively(int[] nums) {
+        buildArrayRecursively(nums, 0);
+        return nums;
+    }
+
+    private void buildArrayRecursively(int[] nums, int start) {
+        if (start < nums.length) {
+            int temp = nums[start];
+            int result = nums[temp];
+            buildArrayRecursively(nums, start + 1);
+            nums[start] = result;
+        }
     }
 }

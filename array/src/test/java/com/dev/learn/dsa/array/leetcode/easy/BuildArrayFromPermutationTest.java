@@ -21,9 +21,11 @@ class BuildArrayFromPermutationTest {
         PrintUtils.print("source array: ", source);
         //when
         var result = USE_CASE.buildArray(source);
+        var recursiveResult = USE_CASE.buildArrayRecursively(source);
         //then
         assertThat(result).containsExactly(expected);
         PrintUtils.print("result array: ", result);
+        PrintUtils.print("recursive result array: ", recursiveResult);
         PrintUtils.print("expected array: ", expected);
     }
 
