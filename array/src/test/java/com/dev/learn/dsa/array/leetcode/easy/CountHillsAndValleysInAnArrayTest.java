@@ -15,7 +15,7 @@ class CountHillsAndValleysInAnArrayTest {
 
     @ParameterizedTest
     @MethodSource
-    @DisplayName("kLengthApart() return true if all 1's are at least k places away from each other, otherwise return false")
+    @DisplayName("Return the number of hills and valleys in nums")
     void test(int[] nums, int expectedResult) {
         assertThat(USE_CASE.countHillValley(nums)).isEqualTo(expectedResult);
     }

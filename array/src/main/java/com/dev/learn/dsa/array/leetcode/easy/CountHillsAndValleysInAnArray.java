@@ -6,8 +6,8 @@ package com.dev.learn.dsa.array.leetcode.easy;
 public class CountHillsAndValleysInAnArray {
 
     /**
-     * Time complexity: O()
-     * Space complexity: O()
+     * Time complexity: O(N^2)
+     * Space complexity: O(1)
      */
     public int countHillValley(int[] nums) {
         var count = 0;
