@@ -1,13 +1,13 @@
 package com.dev.learn.dsa.array.leetcode.easy;
 
 /**
- * <a href="https://leetcode.com/problems/count-hills-and-valleys-in-an-array/">2210. Count Hills and Valleys in an Array</a>
+ * <a href="https://leetcode.com/problems/monotonic-array/">896. Monotonic Array</a>
  */
 public class MonotonicArray {
 
     /**
-     * Time complexity: O()
-     * Space complexity: O()
+     * Time complexity: O(N)
+     * Space complexity: O(1)
      */
     public boolean isMonotonic(int[] nums) {
         var isMonotonic = true;
