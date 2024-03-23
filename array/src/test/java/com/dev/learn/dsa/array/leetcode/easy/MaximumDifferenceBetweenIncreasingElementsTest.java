@@ -22,10 +22,9 @@ class MaximumDifferenceBetweenIncreasingElementsTest {
 
     private static Stream<Arguments> test() {
         return Stream.of(
-                Arguments.of(new int[]{7, 1, 5, 4}, 4)
-//                Arguments.of(new int[]{9, 4, 3, 2}, -1),
-//                Arguments.of(new int[]{1, 5, 2, 10}, 9)
+                Arguments.of(new int[]{7, 1, 5, 4}, 4),
+                Arguments.of(new int[]{9, 4, 3, 2}, -1),
+                Arguments.of(new int[]{1, 5, 2, 10}, 9)
         );
     }
-
 }
