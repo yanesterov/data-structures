@@ -9,7 +9,7 @@ import java.util.List;
 public class TimeNeededToBuyTickets {
 
     /**
-     * Time complexity:
+     * Time complexity: O(N^2)
      * Space complexity: O(1)
      */
     // hint 1: один проход - декремент всех != 0 билетов на 1, инкремент времени на количество людей в очереди(!=0 билетов)
