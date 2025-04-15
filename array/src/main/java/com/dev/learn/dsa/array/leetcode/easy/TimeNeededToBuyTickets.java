@@ -10,21 +10,21 @@ public class TimeNeededToBuyTickets {
 
     /**
      * Time complexity:
-     * Space complexity:
+     * Space complexity: O(1)
      */
-    // выход из очереди: tickets[0] - 1 == 0
-    // движение очереди: tickets[0] - 1 > 0; смещение элементов влево на 1
-    // отслеживание движения нужных билетов: ?
-    // корневые случаи: [], ?
     // hint 1: один проход - декремент всех != 0 билетов на 1, инкремент времени на количество людей в очереди(!=0 билетов)
     public int timeRequiredToBuy(int[] tickets, int k) {
-
         var time = 0;
-        var allTicketsBought = false;
 
-        while (!allTicketsBought) {
-            for(var i = 0; i < tickets.length; i++){
-
+        while (tickets[k] != 0) {
+            for (var i = 0; i < tickets.length; i++) {
+                if (tickets[i] != 0) {
+                    tickets[i]--;
+                    time++;
+                }
+                if (tickets[k] == 0) {
+                    break;
+                }
             }
         }
 
